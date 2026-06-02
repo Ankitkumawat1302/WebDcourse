@@ -1,0 +1,12 @@
+.red{
+    color: rgb(7, 23, 199);
+/*  here . is show the class and # is show the id you can 
+  visit in the .html file */
+}
+.bg-yellow{
+    background-color: rgb(177, 210, 12);
+}
+
+/*#firstdiv{
+   background-color: rgb(220, 7, 7);
+}  */
