@@ -1,0 +1,284 @@
+/* =========================
+   Global Styles
+========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b1026;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* =========================
+   Header & Navbar
+========================= */
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #67e8f9;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: rotateLogo 8s linear infinite;
+}
+
+@keyframes rotateLogo{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #67e8f9;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 100px 20px;
+
+    background:
+    linear-gradient(
+        rgba(11,16,38,0.75),
+        rgba(11,16,38,0.85)
+    ),
+    url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1600");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content{
+    max-width: 800px;
+}
+
+.hero h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p{
+    font-size: 1.1rem;
+    color: #d1d5db;
+    margin-bottom: 35px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px 35px;
+    background: linear-gradient(135deg,#06b6d4,#3b82f6);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.4s;
+    border: 2px solid transparent;
+}
+
+.btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(59,130,246,0.5);
+    border: 2px solid #67e8f9;
+}
+
+/* =========================
+   Features Section
+========================= */
+
+.features{
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.features h2{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.feature-container{
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+}
+
+.feature-card{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+
+    padding: 30px;
+    border-radius: 20px;
+
+    transition: 0.4s;
+}
+
+.feature-card:hover{
+    transform: translateY(-10px);
+}
+
+.feature-card i{
+    font-size: 45px;
+    color: #67e8f9;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.feature-card:hover i{
+    transform: scale(1.2);
+    color: #06b6d4;
+}
+
+.feature-card h3{
+    margin-bottom: 15px;
+}
+
+.feature-card p{
+    color: #d1d5db;
+}
+
+/* =========================
+   About Section
+========================= */
+
+.about{
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.about h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p{
+    color: #d1d5db;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+    background: #060912;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-links{
+    margin-top: 15px;
+}
+
+.footer-links a{
+    color: #67e8f9;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover{
+    text-decoration: underline;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo{
+        font-size: 20px;
+    }
+
+    .logo img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1{
+        font-size: 2.5rem;
+    }
+
+    .hero p{
+        font-size: 1rem;
+    }
+
+    .features h2,
+    .about h2{
+        font-size: 2rem;
+    }
+}
