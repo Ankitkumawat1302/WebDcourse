@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <style>
+    .features{
+    padding: 100px 20px;
+    text-align: center;
+}
+.feature-container{
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+}
+.feature-card{
+    background: rgba(13, 16, 223, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(61, 5, 173, 0.1);
+
+    padding: 30px;
+    border-radius: 20px;
+
+    transition: 0.4s;
+}
+    </style>
+    <section id="features" class="features">
+ <h1>Our Feactures</h1>
+        <div class=" feature-container" >
+           
+    <div class="feature-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Rocket Technology</h3>
+                <p>
+                    Cutting-edge launch systems designed
+                    for future space missions.
+                </p>
+            </div>
+    
+            <div class="feature-card">
+                <i class="fas fa-satellite"></i>
+                <h3>Satellite Network</h3>
+                <p>
+                    Advanced communication and global
+                    connectivity through space.
+                </p>
+            </div>
+             <div class="feature-card">
+                <i class="fas fa-globe"></i>
+                <h3>Planetary Research</h3>
+                <p>
+                    Exploring new worlds and expanding
+                    scientific knowledge.
+                </p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-user-astronaut"></i>
+                <h3>Astronaut Program</h3>
+                <p>
+                    Training future explorers for
+                    deep-space missions.
+                </p>
+            </div>
+
+         </div>
+            </section>
+    
+</body>
+</html>
